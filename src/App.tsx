@@ -57,7 +57,7 @@ function App() {
 
   useEffect(() => {
     // Update this URL to point to your deployed backend if needed.
-    const socket = io('http://localhost:3333');
+    const socket = io('https://uptime-monitor-daqr.onrender.com');
 
     socket.on('connect', () => {
       console.log('Connected to server');
