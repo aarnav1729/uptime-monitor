@@ -1,4 +1,3 @@
-// src/App.tsx
 import React, { useEffect, useState } from 'react';
 import { io } from 'socket.io-client';
 import { Activity, Clock, Server, CheckCircle, XCircle, AlertTriangle } from 'lucide-react';
@@ -30,7 +29,8 @@ function App() {
   });
 
   useEffect(() => {
-    const socket = io('http://localhost:3333');
+    // Change the URL here to your deployed backend
+    const socket = io('https://uptime-monitor-daqr.onrender.com');
 
     socket.on('connect', () => {
       console.log('Connected to server');
